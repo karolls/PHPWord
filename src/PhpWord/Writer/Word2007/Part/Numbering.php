@@ -187,8 +187,8 @@ class Numbering extends AbstractPart
         $xmlWriter->writeAttributeIf($hint !== null, 'w:hint', $hint);
         $xmlWriter->endElement(); // w:rFonts
 		
-		$xmlWriter->writeElementIf($fontSize !== null, 'w:sz', 'w:val', $fontSize);
-        $xmlWriter->writeElementIf($fontSize !== null, 'w:szCs', 'w:val', $fontSize);
+		$xmlWriter->writeElementIf($fontSize !== null, 'w:sz', 'w:val', $fontSize * 2);
+        $xmlWriter->writeElementIf($fontSize !== null, 'w:szCs', 'w:val', $fontSize * 2);
 		
         $xmlWriter->endElement(); // w:rPr
     }
